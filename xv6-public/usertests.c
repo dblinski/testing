@@ -1799,5 +1799,7 @@ main(int argc, char *argv[])
 
   exectest();
 
+  totalcalls();
+  
   exit();
 }
