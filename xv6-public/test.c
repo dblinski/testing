@@ -13,6 +13,7 @@ int main(void){
     wait();
     printf(1, "wait\n");
   }
+  
   printf(1, "Final calls\n");
   totalcalls();
   exit();

@@ -103,7 +103,7 @@ sys_totalcalls(void)
   int *tmp = proc->count;
   int i;
   for(i = 0; i < 22; i++){
-    cprintf("# of %s calls: %d\n", names[i], tmp[i]);
+    cprintf("# of %s calls:\t%d\n", names[i], tmp[i]);
   }
   return 1;
 }

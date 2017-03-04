@@ -1797,9 +1797,9 @@ main(int argc, char *argv[])
 
   uio();
 
-  exectest();
-
   totalcalls();
   
+  exectest();
+
   exit();
 }
