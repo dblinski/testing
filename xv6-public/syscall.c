@@ -132,7 +132,7 @@ syscall(void)
 
   num = proc->tf->eax;
   if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
-    proc->count[num] = proc->count[num] + 1;
+    proc->count[num-1] = proc->count[num-1] + 1;
     proc->tf->eax = syscalls[num]();
   } else {
     cprintf("%d %s: unknown sys call %d\n",
