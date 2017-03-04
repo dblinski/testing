@@ -99,7 +99,7 @@ sys_totalcalls(void)
                   "kill", "exec", "fstat", "chdir", "dup",
                   "getpid", "sbrk", "sleep", "uptime",
                   "open", "write", "mknod", "unlink",
-                  "link", "mkdir", "close", "totalcalls"}
+                  "link", "mkdir", "close", "totalcalls"};
   int *tmp = proc->count;
   int i;
   for(i = 0; i < 22; i++){
