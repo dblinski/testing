@@ -94,7 +94,7 @@ sys_uptime(void)
 int
 sys_totalcalls(void)
 {
-  cprintf(1, "firstname_lastname_studentid");
+  cprintf("firstname_lastname_studentid");
   char *names[] = {"fork", "exit", "wait", "pipe", "read",
                   "kill", "exec", "fstat", "chdir", "dup",
                   "getpid", "sbrk", "sleep", "uptime",
@@ -103,7 +103,7 @@ sys_totalcalls(void)
   int *tmp = proc->count;
   int i;
   for(i = 0; i < 22; i++){
-    cprintf(1, "# of %s calls: %d", names[i], tmp[i]);
+    cprintf("# of %s calls: %d", names[i], tmp[i]);
   }
   return 1;
 }
