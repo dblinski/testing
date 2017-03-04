@@ -89,3 +89,21 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+//return the total number of system calls made since start
+int
+sys_totalcalls(void)
+{
+  printf(1, "firstname_lastname_studentid");
+  char *names[] = {"fork", "exit", "wait", "pipe", "read",
+                  "kill", "exec", "fstat", "chdir", "dup",
+                  "getpid", "sbrk", "sleep", "uptime",
+                  "open", "write", "mknod", "unlink",
+                  "link", "mkdir", "close", "totalcalls"}
+  int *tmp = proc->count;
+  int i;
+  for(i = 0; i < 22; i++){
+    printf(1, "# of %s calls: %d", names[i], tmp[i]);
+  }
+  return 1;
+}
