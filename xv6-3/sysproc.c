@@ -90,20 +90,11 @@ sys_uptime(void)
   return xticks;
 }
 
-//return the total number of system calls made since start
+// return how much memory the current process is using
+// also display the # of pages available and writable
 int
-sys_totalcalls(void)
+sys_memusage(void)
 {
-  cprintf("Daniel_Szablinski_A20324724\n");
-  char *names[] = {"fork", "exit", "wait", "pipe", "read",
-                  "kill", "exec", "fstat", "chdir", "dup",
-                  "getpid", "sbrk", "sleep", "uptime",
-                  "open", "write", "mknod", "unlink",
-                  "link", "mkdir", "close", "totalcalls"};
-  int *tmp = proc->count;
-  int i;
-  for(i = 0; i < 22; i++){
-    cprintf("# of %s calls:\t%d\n", names[i], tmp[i]);
-  }
-  return 1;
+  int countP = 0, countW = 0, countU = 0;
+  
 }
