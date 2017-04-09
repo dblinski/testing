@@ -98,13 +98,14 @@ sys_memusage(void)
   int countP = 0, countW = 0, countU = 0;
   uint i = 0;
   for(i = 0; i < proc->sz; i += PGSIZE){
-      if(proc->pgdir[i] & PTE_P){
+      uint tmp = V2P(proc->pgdir[i]);
+      if(tmp & PTE_P){
           countP++;
       }
-      if(proc->pgdir[i] & PTE_W){
+      if(tmp & PTE_W){
           countW++;
       }
-      if(proc->pgdir[i] & PTE_U){
+      if(tmp & PTE_U){
           countU++;
       }
   }
